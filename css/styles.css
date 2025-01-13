@@ -1,0 +1,205 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.container{
+    height: inherit;
+    display: grid;
+    grid-template: 1fr 4fr/1fr 4fr;
+}
+
+.header{
+    height: inherit;
+    grid-area: 1/2/2/3;
+    background-color: #ffffff;
+    box-shadow: 0 20px 10px grey;
+    padding: 1rem;
+}
+
+.header-top,.header-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .brand-button{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    gap: 20px;
+    background-color: #1a92d3;
+    padding: 0.5rem 1rem;
+    border: 2px solid #1a92d3;
+    border-radius: 20px;
+}
+
+.main{
+    height: inherit;
+    grid-area: 2/2/3/3;
+    background-color: #dfe5ed;
+    padding: 1rem;
+    display: grid;
+    grid-template: repeat(4,1fr) / 3fr 1fr;
+}
+
+.main-project{
+    grid-area: 1/1/5/2;
+    height: inherit;
+}
+
+.main-announcements{
+    grid-area: 1 / 2 / 2 / 3;
+    height: inherit;
+}
+
+.main .main-announcements .announcements-container{
+    background-color: white;
+    padding: 25px;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.main .main-announcements .announcements-container .announcement-card{
+    flex-grow: 1;
+}
+
+.main .main-announcements .announcements-container .announcement-card p{
+    font-size: 12px;
+    padding-bottom:10px;
+    border-bottom: 1px solid grey;
+}
+
+.main .main-announcements .announcements-container .announcement-card:last-child p{
+    border: 0px;
+}
+
+.main-trending{
+    grid-area: 2 / 2 / 5 / 3;
+    height: inherit;
+    margin-top: 10px;
+}
+
+
+.main-trending .trending-container{
+    background-color: white;
+    padding: 25px;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    overflow: auto;
+}
+
+
+
+.main .project-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 2rem;
+    grid-auto-rows: 200px;
+}
+
+.main .card{
+    background-color: white;
+    border-radius: 10px;
+    border-left-color: #f0b42a;
+    border-left-width: 10px;
+    border-left-style: solid;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main .project-container .card .text-content{
+    overflow: auto;
+}
+
+.main .action-menu{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.main p{
+    margin: 3px 0px;
+}
+
+
+
+.project-container, .announcements-container, .trending-container{
+    margin: 10px 10px 0px 0px;
+}
+
+.sidebar{
+    height: inherit;
+    grid-area: 1/1/3/2;
+    background-color: #1a92d3;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.sidebar svg,header svg,.main svg{
+    width: 25px;
+    flex-shrink: 1;
+}
+.sidebar h4,h5{
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-header,.main-menu-item,.header-top-left,.header-top-right,.header-bottom-left,.header-bottom-right, .trending-users{
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.sidebar .main-menu,.support-menu{
+    padding: 10px;
+    display: grid;
+    gap: 1rem;
+}
+
+input{
+    width: 300px;
+    height: 20px;
+    border-radius: 10px;
+    border: 0.25px solid #e2e8f0;
+    background-color: #e2e8f0;
+}
